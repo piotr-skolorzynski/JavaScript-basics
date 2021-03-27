@@ -1,15 +1,7 @@
-// break & continue
+//  loops - practical example
 
-for (let i = 0; i < 10; i++) {
-    console.log(i);
+const links = document.getElementsByTagName('a');
 
-    if (i === 5 || i ===3) {
-        continue; //weaker for of break, breaks and carry on another loop
-    }
-
-    if (i === 7) {
-        break; //ends loop
-    }
+for (let i = 0; i < links.length; i++) {
+    links[i].className = "link-" + i;
 }
-
-console.log('I have broken out of the loop');
