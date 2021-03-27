@@ -1,12 +1,15 @@
-//the first alert
-alert('Hello, World!');
+//example of using camel case
+var myVariableShaun;
 
-//the second alert
-alert('Hello, World!');
+//setting up variable
+myVariableShaun = 10;
 
-/*
-that is how we comment
-multi line
-*/
+var myVar2 = 'hello';
 
-// remember JS is case sensitive
+//changing value
+myVar2 = 'hello again';
+
+//changing the type of variable value
+myVar2 = 5;
+
+//JS is a weakly type language 
