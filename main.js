@@ -1,24 +1,17 @@
-// basic mathematical operators
+// math operators shorthand methods
 
-// = assigment operatator
-var myVar = 5;
+var myVar = 10;
+// myVar = myVar + 5; it can be shortend
+myVar += 10;
 
-// + addition
-myVar = myVar + 10;
+myVar -= 10;
 
-// - substraction 
-myVar = myVar - 10;
+myVar /= 2;
 
-// / - division
-myVar = myVar / 10;
+myVar *= 5;
 
-// * - multiplication
+// myVar = myVar + 1;
+myVar++;
 
-myVar = myVar * 20;
-
-// adding number and string
-var myVar2 = 5 + 'hello'; // converts number to string and concatenate them giving '5hello'. Adding two strings gives the same.
-
-// what happens when you multiply string and number
-
-var myVar3 = 5 * 'hello'; // the result is NaN (not a number)
+// myVar = myVar - 1;
+myVar--;
