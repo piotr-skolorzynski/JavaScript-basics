@@ -1,14 +1,24 @@
-// if else statements
+// comparison operators
 
-let myAge = 29;
+let x = 5;
 
-if (myAge > 30) {
-    document.write('you are over 30!');
-} else if (myAge >20) {
-    document.write('you are over 20!');
-} else if (myAge > 10) {
-    document.write('you are over 10!'); 
-} else {
-    document.write('you are not over 10!');
-}
+// operators
+
+// x > 5;
+// x >= 5;
+// x < 5;
+// x <= 5;
+
+// comparison operator
+// x == 5;
+// x === 5; //cheks value and type
+
+// x = '5';
+// x == 5; //true
+// x === 5 //false because types don't match
+
+// negation operator 
+
+x != 4; //x not equal to 4
+x !== 5; // x not equal and not the same type
 
