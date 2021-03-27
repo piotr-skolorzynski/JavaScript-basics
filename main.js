@@ -1,17 +1,7 @@
-// math operators shorthand methods
+// booleans
 
-var myVar = 10;
-// myVar = myVar + 5; it can be shortend
-myVar += 10;
+var iLikeMeat = true;
 
-myVar -= 10;
+iLikeMeat = false;
 
-myVar /= 2;
-
-myVar *= 5;
-
-// myVar = myVar + 1;
-myVar++;
-
-// myVar = myVar - 1;
-myVar--;
+myVar = Boolean(7>5); //result is boolean
