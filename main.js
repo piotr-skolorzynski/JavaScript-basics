@@ -1,11 +1,15 @@
-// for loops
+// break & continue
 
-const links = document.getElementsByTagName('a');
+for (let i = 0; i < 10; i++) {
+    console.log(i);
 
-let age = 5;
+    if (i === 5 || i ===3) {
+        continue; //weaker for of break, breaks and carry on another loop
+    }
 
-for (let i = 0; i < links.length; i++) {
-    console.log('this is link number ' + (i+1));
+    if (i === 7) {
+        break; //ends loop
+    }
 }
 
-document.write('all links are now looped');
+console.log('I have broken out of the loop');
