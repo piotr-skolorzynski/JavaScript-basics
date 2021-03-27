@@ -1,24 +1,20 @@
-// comparison operators
+// logical operators
 
-let x = 5;
+let myAge = 25;
 
-// operators
+// && means and
 
-// x > 5;
-// x >= 5;
-// x < 5;
-// x <= 5;
+if (myAge >= 18 && myAge <= 30) {
+    document.write('You can come, you cool dude');
+} else {
+    document.write('you aint coming!');
+}
 
-// comparison operator
-// x == 5;
-// x === 5; //cheks value and type
+// || means or
 
-// x = '5';
-// x == 5; //true
-// x === 5 //false because types don't match
-
-// negation operator 
-
-x != 4; //x not equal to 4
-x !== 5; // x not equal and not the same type
+if (myAge < 18 || myAge > 30 || myAge === 25) {
+    document.write('You can come, you cool dude');
+} else {
+    document.write('you aint coming!');
+}
 
