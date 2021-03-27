@@ -1,20 +1,10 @@
-// logical operators
+// while loops
 
-let myAge = 25;
+let age = 5;
 
-// && means and
-
-if (myAge >= 18 && myAge <= 30) {
-    document.write('You can come, you cool dude');
-} else {
-    document.write('you aint coming!');
+while (age < 10) {
+    console.log('Your age is less than 10');
+    age++;
 }
 
-// || means or
-
-if (myAge < 18 || myAge > 30 || myAge === 25) {
-    document.write('You can come, you cool dude');
-} else {
-    document.write('you aint coming!');
-}
-
+document.write('you are now over 10');
