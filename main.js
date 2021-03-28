@@ -1,19 +1,20 @@
-// numbers
+//  NaN - not a number
 
-let a = 5;
+let a = '7';
 let b = 5;
 
-console.log(a+b);
-console.log(typeof(a+b)); //number
+console.log(a+b); // string '75'
 
-let c = '5';
+console.log(a*b); //number 35
 
-console.log(a+c); // result is string '55'
-console.log(typeof(a+c)); //string
+let c = 'apple';
 
-// Math object
+console.log(b*c); //NaN usefull to inform that some variable isn't a number dispite the fact it should
 
-console.log(Math.round(7.2)); // 7
-console.log(Math.round(7.8)); //8
-console.log(Math.ceil(7.48)); //8
-console.log(Math.PI); // gives PI number
+//how to protect
+
+if (isNaN(c)) {
+    console.log('that int even a number, thickie');
+} else {
+    console.log(`meaning of life is ${a*b}`);
+}
