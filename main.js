@@ -1,21 +1,27 @@
-// keyword THIS
+// constructor function
 
-const myCar2 = {
-    maxSpeed: 70,
-    driver: "Magda",
-    drive: function (speed, time) {
+const Car = function (maxspeed, driver) { //constructor function we start with capital letter
+    this.maxspeed = maxspeed;
+    this.driver = driver;
+    this.drive = function (speed, time) {
         console.log(`I travelled ${speed * time} km`);
-    },
-    test: function () {
-        console.log(this); 
-    },
-    logDriver: function () {
-        console.log(`driver name is ${this.driver}`);
+    };
+    this.logDriver = function () {
+        console.log(`The driver name is ${this.driver}`);
     }
 };
 
-console.log(myCar2.maxSpeed); //70
-console.log(myCar2.driver); //Magda
-myCar2.drive(30, 2); //I travelled 60 km
-myCar2.test(); //shows object myCar2 - its properties and methods
+//creating object using constructor
+
+const myCar = new Car(70, "Piotr");
+
+console.log(myCar.maxspeed);
+console.log(myCar.driver);
+myCar.drive(55, 6);
+myCar.logDriver();
+
+const myCar2 = new Car(120, "James Bond");
+console.log(myCar2.maxspeed);
+console.log(myCar2.driver);
+myCar2.drive(115, 3);
 myCar2.logDriver();
