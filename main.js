@@ -1,21 +1,21 @@
-//  functions
+// local vs global scope
 
-//function declaration
-// function getAverage (a,b) {
-//     let average = (a+b)/2;
-//     console.log(average);
-// }
+var foo  = 20; //Global variable
 
-// //calling function
-// getAverage(7,12);
-
-// if we want function to return value we use command return and assign result to variable
+function myFunction () {
+    var bar = 10; //local variable
+};
 
 function getAverage (a,b) {
-    let average = (a+b)/2;
+    var average = (a+b)/2; //local variable2
     console.log(average);
     return average;
+};
+
+var myResult = getAverage(7,11); //global variable
+
+function logResult () {
+    console.log(`the average is ${myResult} inside the function`);    
 }
 
-let myResult = getAverage(7,8);
-console.log(`the average is ${myResult}`);
+logResult();
