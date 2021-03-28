@@ -1,37 +1,30 @@
-// arrays
+// creating objects
 
-//creating array
-let myArray = [];
+let myCar = new Object();
+//adding properties
+myCar.maxSpeed = 50;
+myCar.driver = "Piotr";
 
-myArray[0] = 25;
-console.log(myArray[0]); // 25
+console.log(myCar.driver); // Piotr
 
-//adding values
-myArray[1] = 35;
+//adding methods
 
-myArray[2] = true;
+myCar.drive = function () {
+    console.log('now driving');
+};
 
-myArray[3] = 'hello';
+//calling method drive on object myCar
+myCar.drive();
 
-console.log(myArray); // [25, 35, true, "hello"]
+//another method to create object
+const myCar2 = {
+    maxSpeed: 70,
+    driver: "Magda",
+    drive: function (speed, time) {
+        console.log(`I travelled ${speed * time} km`);
+    }
+};
 
-// updating values
-myArray[2] = false;
-console.log(myArray); // [25, 35, false, "hello"]
-
-//another array creation
-let myArray2 = [10,20,"hi",false];
-
-//other method
-let myArray3 = new Array();
-
-let myArray4 = new Array(5); //creats new Array with 5 epmty slots 
-
-//properties and methods
-
-console.log(myArray2.length); // 4 
-
-console.log(myArray2.sort()); // [10, 20, false, "hi"]
-console.log(myArray2.reverse()); // ["hi", false, 20, 10]
-
-// to see more visit MDN site
+console.log(myCar2.maxSpeed); //70
+console.log(myCar2.driver); //Magda
+myCar2.drive(30, 2); //I travelled 60 km
