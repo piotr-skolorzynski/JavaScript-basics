@@ -1,20 +1,27 @@
-//  NaN - not a number
+// strings
 
-let a = '7';
-let b = 5;
+let myString = 'I\'m a "fun" string';
+console.log(myString);
+console.log(myString.length);
 
-console.log(a+b); // string '75'
+//methods on string
+console.log(myString.toUpperCase());
+console.log(myString.toLowerCase());
+console.log(myString.indexOf("string")); // gives 12, because we count from 0 
+console.log(myString.indexOf('ninja')); // gives -1 if there is no such character or string
 
-console.log(a*b); //number 35
+let myString2 = 'I\'m a "fun ninja" string';
 
-let c = 'apple';
-
-console.log(b*c); //NaN usefull to inform that some variable isn't a number dispite the fact it should
-
-//how to protect
-
-if (isNaN(c)) {
-    console.log('that int even a number, thickie');
+if (myString2.indexOf('ninja') === -1) {
+    console.log('the word ninja is not in the string');
 } else {
-    console.log(`meaning of life is ${a*b}`);
+    console.log('the word ninja starts at position' + (myString2.indexOf('ninja')+1));
 }
+
+let string1 = 'abc';
+let string2 = 'bcd';
+let string3 = 'ABC'
+
+console.log(string1 === string2); //false
+console.log(string1 === string3); //false
+console.log(string1.toLowerCase() === string3.toLowerCase()); //true
