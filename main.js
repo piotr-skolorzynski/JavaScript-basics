@@ -1,21 +1,19 @@
-// local vs global scope
+// numbers
 
-var foo  = 20; //Global variable
+let a = 5;
+let b = 5;
 
-function myFunction () {
-    var bar = 10; //local variable
-};
+console.log(a+b);
+console.log(typeof(a+b)); //number
 
-function getAverage (a,b) {
-    var average = (a+b)/2; //local variable2
-    console.log(average);
-    return average;
-};
+let c = '5';
 
-var myResult = getAverage(7,11); //global variable
+console.log(a+c); // result is string '55'
+console.log(typeof(a+c)); //string
 
-function logResult () {
-    console.log(`the average is ${myResult} inside the function`);    
-}
+// Math object
 
-logResult();
+console.log(Math.round(7.2)); // 7
+console.log(Math.round(7.8)); //8
+console.log(Math.ceil(7.48)); //8
+console.log(Math.PI); // gives PI number
