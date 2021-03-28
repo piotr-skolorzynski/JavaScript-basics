@@ -1,14 +1,33 @@
-//changing css styles
+// adding to & removing elements 
 
-const title = document.getElementById("page-title");
-console.log(title);
+//step 1 - creating element in js
 
-title.setAttribute('style', 'position: relative;');
+const newLi = document.createElement('li');
+const newA = document.createElement('a');
 
-title.setAttribute('style', 'position: relative; left: 10px;');
+//step2 - pop element in to the DOM
 
-title.style.left = "200px";
-title.style.top = "100px";
-title.style.color = "red";
-title.style.backgroundColor = "blue";
+const pageUl = document.getElementById('main-nav').getElementsByTagName('ul')[0];
 
+console.log(pageUl);
+
+newLi.appendChild(newA);
+pageUl.appendChild(newLi);
+console.log(pageUl);
+
+newA.setAttribute('href', '#');
+newA.textContent = "Link 3";
+
+// what if we want to insert element in some else than bottom
+
+pageUl.insertBefore(newLi, pageUl.getElementsByTagName('li')[0]);
+
+// removing elements
+const parent = document.getElementById('main-nav').getElementsByTagName('ul')[0];
+console.log(parent);
+
+const child = document.getElementsByTagName('li')[0];
+console.log(child);
+
+const removed = parent.removeChild(child);
+console.log(removed);
