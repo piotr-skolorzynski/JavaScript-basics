@@ -1,22 +1,14 @@
-// accessing form elements
+// very simple form validation 
 
 const myForm = document.forms.myForm;
-console.log(myForm);
+const message = document.getElementById('message');
 
-console.log(myForm.name);//showing access to input name
-//we have also access to properties of that element
-console.log(myForm.name.value);
-
-//other element select with name = colour
-console.log(myForm.colour.value);
-
-//onfocus event 
-
-myForm.name.onfocus = function(){
-    myForm.name.style.border = "4px solid pink";
-};
-
-//onblur
-myForm.name.onblur = function(){
-    myForm.name.style.border = "none";
+myForm.onsubmit = function() {
+    if (myForm.name.value == "") {
+        message.innerHTML = "please enter a name";
+        return false;
+    } else {
+        message.innerHTML = "";
+        return true;
+    } 
 };
