@@ -1,22 +1,34 @@
-function setUpEvents () {
-    //grabbing elements
-    const content = document.getElementById('content');
-    const button = document.getElementById('show-more');
-    // onclick event
-    button.onclick = function () {
-        if (content.className == "open") {
-            //shrink the box
-            content.className = "";
-            button.textContent = "show more";
-        } else {
-            //expand the box
-            content.className = "open";
-            button.textContent = "Show less";
-        }
-    };
+// js timers
+
+const myMessage = document.getElementById('message');
+
+function showMessage(){
+    myMessage.className = 'show';
+} 
+
+setTimeout(showMessage, 3000);
+
+
+// ---------------------
+
+const colourChanger = document.getElementById('colour-changer');
+const colours = ["red", "blue", "green", "pink"];
+let counter = 0; //shows position in array
+
+function changeColour() {
+    colourChanger.style.backgroundColor = colours[counter];
+    if (counter == colours.length) {
+        counter = 0;
+    } else {
+        counter++;
+    }        
 };
 
-//onload event
-window.onload = function () {
-    setUpEvents();
+let myTimer = setInterval(changeColour, 3000);
+
+// how to stop timer
+
+colourChanger.onclick = function() {
+    clearInterval(myTimer);
+    colourChanger.innerHTML = 'Timer stopped';
 };

@@ -2,34 +2,31 @@ body {
     background-color: #eee;
 }
 
-#content {
+#message {
     width: 400px;
-    background-color: #fff;
+    background-color: #ddaaaa;
     padding: 20px;
-    padding-top: 0;
     font-family: calibri;
     font-size: 18px;
     color: #444;
     margin: 0 auto;
-    max-height: 270px;
-    overflow: hidden;
-    transition: max-height .5s;
-}
-
-#content.open {
-    max-height: 1000px;
-}
-
-#show-more {
-    background-color: #1594e5;;
-    color: #fff;
-    font-family: calibri;
-    display: block;
-    width: 180px;
-    font-size: 24px;
-    text-transform: uppercase;
-    padding: 10px;
     text-align: center;
-    margin: 20px auto;
-    cursor: pointer;
+    border: 1px solid #ff7777;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity .7s;
+}
+
+#message.show {
+    opacity: 1;
+    transition: opacity .7s;
+}
+
+#colour-changer {
+    width: 200px;
+    height: 100px;
+    margin: 30px auto;
+    border: 1px solid #000;
+    background-color: #fff;
+    transition: background .7s;
 }
