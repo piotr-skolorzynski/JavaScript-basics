@@ -1,33 +1,18 @@
-// adding to & removing elements 
+// onclick event
 
-//step 1 - creating element in js
+//grabbing elements
 
-const newLi = document.createElement('li');
-const newA = document.createElement('a');
+const content = document.getElementById('content');
+const button = document.getElementById('show-more');
 
-//step2 - pop element in to the DOM
-
-const pageUl = document.getElementById('main-nav').getElementsByTagName('ul')[0];
-
-console.log(pageUl);
-
-newLi.appendChild(newA);
-pageUl.appendChild(newLi);
-console.log(pageUl);
-
-newA.setAttribute('href', '#');
-newA.textContent = "Link 3";
-
-// what if we want to insert element in some else than bottom
-
-pageUl.insertBefore(newLi, pageUl.getElementsByTagName('li')[0]);
-
-// removing elements
-const parent = document.getElementById('main-nav').getElementsByTagName('ul')[0];
-console.log(parent);
-
-const child = document.getElementsByTagName('li')[0];
-console.log(child);
-
-const removed = parent.removeChild(child);
-console.log(removed);
+button.onclick = function () {
+    if (content.className == "open") {
+        //shrink the box
+        content.className = "";
+        button.textContent = "show more";
+    } else {
+        //expand the box
+        content.className = "open";
+        button.textContent = "Show less";
+    }
+};
