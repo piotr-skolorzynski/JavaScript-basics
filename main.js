@@ -1,34 +1,22 @@
-// js timers
+// accessing form elements
 
-const myMessage = document.getElementById('message');
+const myForm = document.forms.myForm;
+console.log(myForm);
 
-function showMessage(){
-    myMessage.className = 'show';
-} 
+console.log(myForm.name);//showing access to input name
+//we have also access to properties of that element
+console.log(myForm.name.value);
 
-setTimeout(showMessage, 3000);
+//other element select with name = colour
+console.log(myForm.colour.value);
 
+//onfocus event 
 
-// ---------------------
-
-const colourChanger = document.getElementById('colour-changer');
-const colours = ["red", "blue", "green", "pink"];
-let counter = 0; //shows position in array
-
-function changeColour() {
-    colourChanger.style.backgroundColor = colours[counter];
-    if (counter == colours.length) {
-        counter = 0;
-    } else {
-        counter++;
-    }        
+myForm.name.onfocus = function(){
+    myForm.name.style.border = "4px solid pink";
 };
 
-let myTimer = setInterval(changeColour, 3000);
-
-// how to stop timer
-
-colourChanger.onclick = function() {
-    clearInterval(myTimer);
-    colourChanger.innerHTML = 'Timer stopped';
+//onblur
+myForm.name.onblur = function(){
+    myForm.name.style.border = "none";
 };
